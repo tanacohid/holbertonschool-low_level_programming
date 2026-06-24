@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
 * main - Entry point
-*
+* betty sale pute
 * Return: Always 0 (Success)
 */
 int main(void)
@@ -18,7 +18,7 @@ int main(void)
 		if (last_digit < 5)
 		{
 			printf("Last digit of %d is %d and is ", n, last_digit);
-			printf(" less than 6 and not 0\n");
+			printf("less than 6 and not 0\n");
 		}
 		else if (last_digit > 5)
 		{

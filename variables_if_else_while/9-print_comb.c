@@ -15,8 +15,12 @@ c = '0';
 	{
 		putchar(c);
 		c++;
-		putchar(',');
-		putchar(' ');
+
+		if (!(c > '9'))
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 

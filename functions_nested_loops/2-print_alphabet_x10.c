@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_alphabet - ta race betty
+* print_alphabet_x10 - ta race betty
 */
 
 void print_alphabet_x10(void)

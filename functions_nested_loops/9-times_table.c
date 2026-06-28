@@ -16,11 +16,11 @@ void times_table(void)
 		{
 				for (t; t + t; t++);
 			{
-				_putchar(t)
-				_putchar(',')
-				_putchar(' ')
+				_putchar(t);
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		_putchar('\n')
+		_putchar('\n');
 	}
 }

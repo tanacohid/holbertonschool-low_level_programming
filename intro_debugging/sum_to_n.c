@@ -8,7 +8,7 @@
 8	    for (i = 1; i <= n; i++)
 9	        sum += i;
 10	
-11	    return sum;
+11	    return (sum);
 12	}
 13	
 14	/* -- DO NOT Modify the code below this line -- */

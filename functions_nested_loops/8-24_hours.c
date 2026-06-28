@@ -10,8 +10,8 @@ void jack_bauer(void)
 	int min;
 	int h;
 
-	min = 00
-	h = 00
+	min = 0
+	h = 0
 
 	for (h = 0; h < 24 ; h++)
 	{

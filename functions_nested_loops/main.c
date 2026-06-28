@@ -5,8 +5,8 @@
  *
  * Return: Always 0.
  */
-int main(void)
+void times_table(void);
 {
-    jack_bauer();
+    times_table();
     return (0);
-}
+}  

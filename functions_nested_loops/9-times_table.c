@@ -9,16 +9,28 @@ void times_table(void)
 {
 	int n;
 	int t;
+	int p;
 
-	for (n = 0; n <= 10; n++)
+	p = 0;
+
+	for (n = 0; n < 10; n++)
 	{
-		for (t = 0; t + n; t++)
+		for (t = 0; t < 10; t++)
 		{
-			(t + t)
-			_putchar(t);
-			_putchar(',');
-			_putchar(' ');
-		
+			(p = t * n);
+			if	(p >= 10)
+				_putchar((p / 10) + '0');
+
+			_putchar((p % 10) + '0');
+
+			if (!(t >= 9))
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				if	(p < 10)
+					_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}

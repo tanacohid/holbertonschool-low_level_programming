@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - check the code
+* times_table - no more
 *
 * Return: Always 0.
 */

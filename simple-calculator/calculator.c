@@ -11,7 +11,7 @@ int main (void)
     while (choice != 0)
     {
         printf ("1) add\n2) Substact\n3) Multiply\n4) Divide\n0) Quit\n")
-        printf ("choice ?"\n)
+        printf ("choice ?\n")
         scanf ("%d", &choice);
         if (choice == 0)
         {

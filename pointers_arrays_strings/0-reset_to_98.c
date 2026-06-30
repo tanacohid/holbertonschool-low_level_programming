@@ -1,5 +1,4 @@
 #include "main.h"
-#include "main.c"
 #include <stdio.h>
 /**
 * reset_to_98 - to beat or not to beat

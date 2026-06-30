@@ -2,5 +2,8 @@
 #include "main.c"
 #include <stdio.h>
 
-int n;
-n : 98
+void reset_to_98(int *n)
+{
+    int n;
+    n : 98
+}

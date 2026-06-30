@@ -14,7 +14,6 @@ static unsigned int next_value(unsigned int *state)
 
 static void build_dataset(void)
 {
-	total_start = clock();
     unsigned int state;
     int i;
 
@@ -22,12 +21,10 @@ static void build_dataset(void)
 
     for (i = 0; i < DATASET_SIZE; i++)
         dataset[i] = (int)(next_value(&state) % 100000);
-	total_end = clock();
 }
 
 static void process_dataset(void)
 {
-	total_start = clock();
     int i;
     int v;
 
@@ -39,12 +36,10 @@ static void process_dataset(void)
             v = -v;
         dataset[i] = v;
     }
-	total_end = clock();
 }
 
 static unsigned long reduce_checksum(void)
 {
-	total_start = clock();
     unsigned long sum;
     int i;
 
@@ -53,22 +48,29 @@ static unsigned long reduce_checksum(void)
         sum = (sum * 131ul) + (unsigned long)dataset[i];
 
     return sum;
-	total_end = clock();
 }
 
 int main(void)
 {
-	int total_start;
-	int total_end;
-	total_start = clock();
+	clock_t tms;
+	clock_t tps2;
+	clock_t tps1;
+	clock_t tps;
+	clock_t total_start;
+	clock_t total_end;
     unsigned long checksum;
 
     /* Students must add clock-based timing and print required lines. */
-
-    build_dataset();
+	total_start = clock();
+	tps = clock();
+	build_dataset();
+	tps = clock() - tps;
+	tps1 = clock();
     process_dataset();
+	tps1 = clock() - tps1;
+	tps2 = clock();
     checksum = reduce_checksum();
-
+	tps2 = clock() - tps2;
     if (checksum == 0ul)
         printf("impossible\n");
 
@@ -79,6 +81,10 @@ int main(void)
      * REDUCE seconds: <float>
      */
 	total_end = clock();
-	printf("total %.6f" clock())
+	tms = total_end - total_start;
+	printf("TOTAL seconds: %.6f\n", (float)tms / CLOCKS_PER_SEC);
+	printf("BUILD_DATA seconds: %.6f\n", (float)tps / CLOCKS_PER_SEC);
+	printf("PROCESS seconds: %.6f\n", (float)tps1 / CLOCKS_PER_SEC);
+	printf("REDUCE seconds: %.6f\n", (float)tps2 / CLOCKS_PER_SEC);
     return 0;
 }

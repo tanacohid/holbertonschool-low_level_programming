@@ -2,6 +2,10 @@
 int main (void)
 {
     int choice = 1;
+    /**
+    * int - a; b
+    *
+     */
     int a = 0;
     int b = 0;
     int result = 0;
@@ -18,4 +22,5 @@ int main (void)
             printf ("bye!");
         }
     }
+    return (0);
 }

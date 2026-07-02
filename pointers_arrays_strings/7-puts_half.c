@@ -1,16 +1,23 @@
-#include <unistd.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * _strlen - compte le nombre de caractere donner
+ * @s: est la suite de char
+ * Return: a
  */
-int _putchar(char c)
+int _strlen(char *s)
 {
-	return (write(1, &c, 1));
+	int a;
+
+	a = 0;
+
+	while (*s != '\0')
+	{
+		a++;
+		s++;
+	}
+	return (a);
 }
 
 /**

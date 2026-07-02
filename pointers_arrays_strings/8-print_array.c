@@ -1,18 +1,22 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* puts_half - prints every other character of a string
-* @str: pointer to the string
-*/
+ * print_array - prints n elements of an array
+ * @a: pointer to the array
+ * @n: number of elements to print
+ */
 void print_array(int *a, int n)
 {
-    int i;
-    int t;
+	int i;
 
-    i = _strlen(a);
-    t = 0;
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
 
-    for (t = 0; *a[t] = *a[i]; t++)
+		if (i != n - 1)
+			printf(", ");
+	}
 
-        printf("%d, "; *a[t])
+	printf("\n");
 }

@@ -58,9 +58,9 @@ int main (void)
 			scanf("%d", &a);
 			printf ("B: ");
 			scanf("%d", &b);
-			if (b ==0)
+			if (b == 0)
 			{
-				printf("")
+				printf("t");
 			}
 			result = a + b;
 			printf("Result = %d\n", result);

@@ -60,9 +60,9 @@ int main (void)
 			scanf("%d", &b);
 			if (b == 0)
 			{
-				printf("t");
+				printf("Error: division by zero");
 			}
-			result = a + b;
+			result = a / b;
 			printf("Result = %d\n", result);
 		}
 	}

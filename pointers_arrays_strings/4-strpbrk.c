@@ -2,12 +2,12 @@
 #include <stddef.h>
 
 /**
- * _strpbrk - searches a string for any of a set of bytes
- * @s: string to search
- * @accept: string containing accepted characters
- *
- * Return: pointer to the first matching character, or NULL if none is found
- */
+* _strpbrk - searches a string for any of a set of bytes
+* @s: string to search
+* @accept: string containing accepted characters
+*
+* Return: pointer to the first matching character, or NULL if none is found
+*/
 char *_strpbrk(char *s, char *accept)
 {
 	int i;

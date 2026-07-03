@@ -1,26 +1,17 @@
 #include "main.h"
 
 /**
-* print_rev - prints a string in reverse
-* @s: pointer to the string
-*/
-
-void reverse_array(int *a, int n);
+ * rev_string - reverses a string
+ * @s: pointer to the string
+ */
+void rev_string(char *s)
 {
-	int debut;
-	int fin;
-	char temp;
+	int i;
 
-	debut = 0;
-	fin = n - 1;
+	i = _strlen(s);
 
-	while (debut < fin)
+	for ((i = _strlen(s)); (s[i]) >= '0'; (s[i])--)
 	{
-		temp = a[debut];
-		a[debut] = a[fin];
-		a[fin] = temp;
-
-		debut++;
-		fin--;
+		_putchar (s[i]);
 	}
 }

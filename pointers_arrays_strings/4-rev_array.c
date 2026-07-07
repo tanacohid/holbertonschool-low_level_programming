@@ -12,7 +12,7 @@ void reverse_array(int *a, int n)
 	int temp;
 
 	debut = 0;
-	fin = n - 1;
+	fin = n - 1; // pas obliger, on arrait peu faire (n - 1) a la place de tout les variable fin //
 
 	while (debut < fin)
 	{

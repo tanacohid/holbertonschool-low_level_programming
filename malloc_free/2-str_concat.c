@@ -3,12 +3,18 @@
 #include <stdlib.h>
 
 /**
-* _strdup - returns a pointer to a newly allocated space in memory
-*           containing a copy of the string
-* @str: string to duplicate
-*
-* Return: pointer to the duplicated string, or NULL if it fails
-*/
+ * str_concat - concatène deux chaînes de caractères
+ * @s1: première chaîne de caractères
+ * @s2: deuxième chaîne de caractères
+ *
+ * Cette fonction alloue un nouvel espace mémoire, copie le contenu
+ * de s1 puis celui de s2 dans ce nouvel espace, et ajoute le caractère
+ * de fin de chaîne '\0'. Si l'un des paramètres est NULL, il est traité
+ * comme une chaîne vide.
+ *
+ * Return: un pointeur vers la nouvelle chaîne concaténée,
+ * ou NULL si l'allocation mémoire échoue.
+ */
 char *str_concat(char *s1, char *s2)
 {
 	int i = 0;
@@ -33,7 +39,7 @@ char *str_concat(char *s1, char *s2)
 	{}
 
 	t = malloc(sizeof(char) * (i + p + 1));
-	
+
 	if (t == NULL)
 	{
 		return (NULL);

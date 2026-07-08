@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 /**
-* _strdup - returns a pointer to a newly allocated space in memory
-*           containing a copy of the string
-* @str: string to duplicate
-*
-* Return: pointer to the duplicated string, or NULL if it fails
-*/
+ * alloc_grid - creates a 2D array of integers
+ * @width: number of columns
+ * @height: number of rows
+ *
+ * Return: pointer to the new grid, or NULL on failure
+ */
 int **alloc_grid(int width, int height)
 {
 	int i;
@@ -20,7 +20,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	tableau = malloc(sizeoff(int) * height);
+	tableau = malloc(sizeof(int) * height);
 
 	if (tableau == NULL)
 	{
@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 
 	for (j = 0; j < height; j++)
 	{
-		tableau[j] = malloc(sizeoff(int) * width);
+		tableau[j] = malloc(sizeof(int) * width);
 		if (tableau[j] == NULL)
 		{
 			for (j = 0; j < height; j++)

@@ -20,7 +20,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	tableau = malloc(sizeof(int) * height);
+	tableau = malloc(sizeof(int *) * height);
 
 	if (tableau == NULL)
 	{

@@ -2,27 +2,29 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates memory for an array
- * @nmemb: number of elements
- * @size: size of each element
+ * array_range - creates an array of integers
+ * @min: minimum value
+ * @max: maximum value
  *
- * Return: pointer to the allocated memory, or NULL on failure
+ * Return: pointer to the new array, or NULL on failure
  */
 int *array_range(int min, int max)
 {
-    int total = max - min + 1;
+	int *tableau;
+	int i, total;
 
-    if (min > max)
-        return (NULL);
+	if (min > max)
+		return (NULL);
 
-    total = malloc(total * sizeof(int));
+	total = max - min + 1;
 
-    if (total == NULL)
-        return (NULL);
-    
-    for (int i = 0; i < total; i++)
-    {
-        total[i] = min + i;
-    }
-    return (total);
+	tableau = malloc(sizeof(int) * total);
+
+	if (tableau == NULL)
+		return (NULL);
+
+	for (i = 0; i < total; i++)
+		tableau[i] = min + i;
+
+	return (tableau);
 }

@@ -31,7 +31,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			t = "";
 
 		printf("%s%s", t, separator);
-		t++
+		t++;
 	}
 	va_end(args);
 	printf("\n");

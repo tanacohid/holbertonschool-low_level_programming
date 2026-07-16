@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - affiche les sting dans va_list 
+ * print_strings - affiche les sting dans va_list
  * @separator: separt deux argument de va_list
  * @n: le nombre d'argument de va_list
  */

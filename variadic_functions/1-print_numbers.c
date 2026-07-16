@@ -1,9 +1,9 @@
 #include "variadic_functions.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_numbers - print tout les argument va_list
+ * separator: separt deux argument de va_list
+ * n: le nombre d'argument de va_list
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {

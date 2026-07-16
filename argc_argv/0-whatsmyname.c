@@ -8,6 +8,6 @@
 int main(int argc, char *argv[])
 {
 	(void)argc;
-	printf("%d", argv[0]);
+	printf("%c", argv[0]);
 	return (0);
 }

@@ -28,7 +28,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		t = va_arg(args, *char)
 		if (t == NULL)
-			*t = "";
+			t = "";
 
 		printf("%s%s", va_arg(args, *char), separator);
 	}

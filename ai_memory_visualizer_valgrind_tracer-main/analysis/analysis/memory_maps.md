@@ -125,3 +125,4 @@ The AI explanation contains **three fundamental misconceptions** regarding low-l
 
 3. **Incorrect Assumption 3: Accessing freed memory (`b[3] = 1234`) always causes an immediate Segmentation Fault.**
    - **Correction:** Accessing freed heap memory is **Undefined Behavior (UB)**, not an automatic crash. In many runtimes, writing through a dangling pointer succeeds silently, corrupting heap metadata or other data structures, and only crashes later when `malloc` or `free` is called again. Valgrind detects this via shadow memory tracking (`Invalid write of size 4`), even when the program does not crash outright.
+   

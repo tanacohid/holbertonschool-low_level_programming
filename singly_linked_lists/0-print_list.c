@@ -1,10 +1,9 @@
 #include "lists.h"
 #include <stdio.h>
-#include "main.h"
 
 /**
  * print_list - prints all the elements of a list_t list
- * @h: pointer to the first node of the list
+ * @h: pointer to the first node
  *
  * Return: the number of nodes
  */

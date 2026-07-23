@@ -1,5 +1,10 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef LISTS_H
+#define LISTS_H
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
 
 typedef struct list_s
 {

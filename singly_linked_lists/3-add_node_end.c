@@ -3,16 +3,16 @@
 #include <string.h>
 
 /**
- * add_node - adds a new node at the beginning of a list_t list
+ * add_node_end - adds a new node at the end of a list_t list
  * @head: address of the head pointer
- * @str: string to store in the new node
+ * @str: string to duplicate
  *
- * Return: address of the new element, or NULL if it failed
+ * Return: address of the new node, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *current
 	list_t *new;
+	list_t *current;
 	unsigned int i = 0;
 
 	new = malloc(sizeof(list_t));
@@ -26,23 +26,24 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	for (i = 0; str[i] != '\0'; i++)
-	{}
+	while (str[i] != '\0')
+		i++;
+
 	new->len = i;
 	new->next = NULL;
-	
+
 	if (*head == NULL)
 	{
 		*head = new;
-		return (new)
+		return (new);
 	}
 
 	current = *head;
 
 	while (current->next != NULL)
-	{
-		current->next = new;
-	}
-	
+		current = current->next;
+
+	current->next = new;
+
 	return (new);
 }
